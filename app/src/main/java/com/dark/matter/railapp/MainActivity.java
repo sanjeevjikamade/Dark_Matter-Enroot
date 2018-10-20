@@ -1,11 +1,15 @@
 package com.dark.matter.railapp;
 
+import android.content.Context;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.dark.matter.railapp.common.GenericCallback_Error;
 import com.dark.matter.railapp.common.GenericCallback_Success;
@@ -31,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setTrainDetails(this);
         binding.setTrainIdString("");
+
         //getTrainDetails();
 
         binding.editSearchTrain.addTextChangedListener(new TextWatcher() {
@@ -50,10 +55,20 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
     }
 
     public void onSendClick(String enteredString) {
         getTrains(enteredString);
+    }
+
+    public void onSendClick() {
+        Intent i = new Intent(this, StatusListAcitivity.class);
+        startActivity(i);
+    }
+    public void onShowMap() {
+        Intent i = new Intent(this, TrainsListAcitivity.class);
+        startActivity(i);
     }
 
     public void getTrains(String enteredString) {
@@ -123,4 +138,5 @@ public class MainActivity extends AppCompatActivity {
                 .subscribe(new GenericCallback_Success<>(MainActivity.this, true, successRes),
                         new GenericCallback_Error<>(MainActivity.this, true, errorRes));
     }
+
 }

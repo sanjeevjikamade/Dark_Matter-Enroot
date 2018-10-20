@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">RailApp</string>
+    <string name="app_name">Rail App</string>
     <string name="editSearchTrain_label">Search Train here</string>
     <string name="buttontext">Search Train</string>
+    <string name="btnStataus">Detail Status</string>
+    <string name="title_activity_menu">Rail App</string>
 </resources>

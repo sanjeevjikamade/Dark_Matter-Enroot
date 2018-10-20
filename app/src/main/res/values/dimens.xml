@@ -194,5 +194,6 @@
     <dimen name="divider_size_vert">2dp</dimen>
     <dimen name="divider_gap_vert">10dp</dimen>
 
+    <dimen name="row_padding_vertical">10dp</dimen>
 
 </resources>

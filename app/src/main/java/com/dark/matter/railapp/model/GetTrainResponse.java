@@ -5,48 +5,8 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class GetTrainDetailsResponse {
+public class GetTrainResponse {
 
-    @SerializedName("ResponseCode")
-    @Expose
-    private String responseCode;
-    @SerializedName("Status")
-    @Expose
-    private String status;
-    @SerializedName("Trains")
-    @Expose
-    private List<Trains> trains = null;
-    @SerializedName("Message")
-    @Expose
-    private Object message;
-
-    public void setResponseCode(String responseCode) {
-        this.responseCode = responseCode;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public List<Trains> getTrains() {
-        return trains;
-    }
-
-    public void setTrains(List<Trains> trains) {
-        this.trains = trains;
-    }
-
-    public Object getMessage() {
-        return message;
-    }
-
-    public void setMessage(Object message) {
-        this.message = message;
-    }
 
     public class Class {
 
@@ -168,7 +128,9 @@ public class GetTrainDetailsResponse {
     @SerializedName("route")
     @Expose
     private List<Route> route = null;
-
+    @SerializedName("response_code")
+    @Expose
+    private Integer responseCode;
     @SerializedName("start_date")
     @Expose
     private String startDate;
@@ -196,6 +158,14 @@ public class GetTrainDetailsResponse {
 
     public void setRoute(List<Route> route) {
         this.route = route;
+    }
+
+    public Integer getResponseCode() {
+        return responseCode;
+    }
+
+    public void setResponseCode(Integer responseCode) {
+        this.responseCode = responseCode;
     }
 
     public String getStartDate() {
@@ -473,127 +443,6 @@ public class GetTrainDetailsResponse {
 
         public void setNumber(String number) {
             this.number = number;
-        }
-
-    }
-
-    public class Example {
-
-        @SerializedName("ResponseCode")
-        @Expose
-        private String responseCode;
-        @SerializedName("Status")
-        @Expose
-        private String status;
-        @SerializedName("Trains")
-        @Expose
-        private List<com.dark.matter.railapp.model.Train> trains = null;
-        @SerializedName("Message")
-        @Expose
-        private Object message;
-
-        public String getResponseCode() {
-            return responseCode;
-        }
-
-        public void setResponseCode(String responseCode) {
-            this.responseCode = responseCode;
-        }
-
-        public String getStatus() {
-            return status;
-        }
-
-        public void setStatus(String status) {
-            this.status = status;
-        }
-
-        public List<com.dark.matter.railapp.model.Train> getTrains() {
-            return trains;
-        }
-
-        public void setTrains(List<com.dark.matter.railapp.model.Train> trains) {
-            this.trains = trains;
-        }
-
-        public Object getMessage() {
-            return message;
-        }
-
-        public void setMessage(Object message) {
-            this.message = message;
-        }
-
-
-    }
-
-    public class Trains {
-
-        @SerializedName("TrainNo")
-        @Expose
-        private String trainNo;
-        @SerializedName("TrainName")
-        @Expose
-        private String trainName;
-        @SerializedName("Source")
-        @Expose
-        private String source;
-        @SerializedName("ArrivalTime")
-        @Expose
-        private String arrivalTime;
-        @SerializedName("Destination")
-        @Expose
-        private String destination;
-        @SerializedName("DepartureTime")
-        @Expose
-        private String departureTime;
-
-        public String getTrainNo() {
-            return trainNo;
-        }
-
-        public void setTrainNo(String trainNo) {
-            this.trainNo = trainNo;
-        }
-
-        public String getTrainName() {
-            return trainName;
-        }
-
-        public void setTrainName(String trainName) {
-            this.trainName = trainName;
-        }
-
-        public String getSource() {
-            return source;
-        }
-
-        public void setSource(String source) {
-            this.source = source;
-        }
-
-        public String getArrivalTime() {
-            return arrivalTime;
-        }
-
-        public void setArrivalTime(String arrivalTime) {
-            this.arrivalTime = arrivalTime;
-        }
-
-        public String getDestination() {
-            return destination;
-        }
-
-        public void setDestination(String destination) {
-            this.destination = destination;
-        }
-
-        public String getDepartureTime() {
-            return departureTime;
-        }
-
-        public void setDepartureTime(String departureTime) {
-            this.departureTime = departureTime;
         }
 
     }

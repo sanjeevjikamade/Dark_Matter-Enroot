@@ -12,6 +12,7 @@ import com.dark.matter.railapp.common.GenericCallback_Success;
 import com.dark.matter.railapp.common.OriginalResponse;
 import com.dark.matter.railapp.databinding.ActivityMainBinding;
 import com.dark.matter.railapp.model.GetTrainDetailsResponse;
+import com.dark.matter.railapp.model.TrainNameSuggesationResponse;
 import com.dark.matter.railapp.network.ApiServiceFactory;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -21,6 +22,7 @@ import static com.dark.matter.railapp.common.Utilities.isInternetAvailable;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
+    String APIKEY = "aslaerogy5";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         //showProgress();
-        OriginalResponse<String> successRes =
-                (boolean statusCode, String response) -> {
+        OriginalResponse<TrainNameSuggesationResponse> successRes =
+                (boolean statusCode, TrainNameSuggesationResponse response) -> {
                     //hideProgress();
                     if (!statusCode) {
                         return;
@@ -71,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                     //Toast.makeText(this, toast_respnse_fail, Toast.LENGTH_SHORT).show();
                     //return;
                     //}
-
+                    getTrainDetails(response.getTrains().get(0).getNumber());
                 };
 
         OriginalResponse<Throwable> errorRes =
@@ -80,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
 
                 };
-        String URL = "https://api.railwayapi.com/v2/suggest-train/train/" + enteredString + "/apikey/myapikey/";
+        String URL = "https://api.railwayapi.com/v2/suggest-train/train/" + enteredString + "/apikey/" + APIKEY + "/";
         ApiServiceFactory.getApiService().getTrains(URL)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -100,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                         return;
                     }
                     Log.e("", "response" + response.toString());
-                    binding.text.setText(response.getCurrentStation().toString());
+                    binding.text.setText(response.getPosition());
                     //if (response.getStatus() != SUCCESS_CODE) {
                     //Toast.makeText(this, toast_respnse_fail, Toast.LENGTH_SHORT).show();
                     //return;
@@ -114,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
 
                 };
-        String URL = "https://api.railwayapi.com/v2/live/train/" + trainNumber + "/date/20-10-2018/apikey/mhem63khmr";
+        String URL = "https://api.railwayapi.com/v2/live/train/" + trainNumber + "/date/20-10-2018/apikey/" + APIKEY + "";
         ApiServiceFactory.getApiService().getTrainDetails(URL)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

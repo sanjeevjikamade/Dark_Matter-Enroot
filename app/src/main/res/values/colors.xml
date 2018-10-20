@@ -1,6 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <!--<color name="colorPrimary">#d92229</color>
+    <color name="colorPrimaryDark">#cb0100</color>
+    <color name="colorAccent">#feecbc</color>-->
+
+    <color name="colorPrimary">#c7222b</color>
+    <color name="colorPrimaryDark">#B21E25</color>
+    <color name="colorAccent">#feecbc</color>
+
+    <!--<color name="red_walkthrough">#c7222b</color>-->
+
+    <color name="white">#ffffff</color>
+    <color name="white_30">#4DFFFFFF</color>
+    <color name="white_40">#64FFFFFF</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="white_60">#99FFFFFF</color>
+    <color name="white_1">#fafafa</color>
+    <color name="black">#000000</color>
+
+
+    <color name="dot_active">#000000</color>
+    <color name="dot_inactive">#B2B2B2</color>
+    <color name="actionBarColor">#f97e05</color>
+    <color name="tooltip_color">#f7a502</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_active</item>
+        <item>@color/dot_active</item>
+        <item>@color/dot_active</item>
+        <item>@color/dot_active</item>
+    </array>
+    <array name="array_dot_active_red">
+        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimary</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_inactive</item>
+        <item>@color/dot_inactive</item>
+        <item>@color/dot_inactive</item>
+        <item>@color/dot_inactive</item>
+    </array>
+
+    <color name="bluestream_end">#3AB5F1</color>
+    <color name="bluestream_start">#833FF6</color>
+
+    <color name="greenstream_end">#26C0B8</color>
+    <color name="greenstream_start">#45E895</color>
+
+    <color name="redtream_end">#EC5463</color>
+    <color name="redstream_start">#D7273B</color>
+
+    <color name="grey1">#9d9d9d</color>
+    <color name="grey2">#82878a</color>
+    <color name="grey3">#d8d8d8</color>
+    <color name="grey4">#8f8f8f</color>
+    <color name="grey5">#787878</color>
+
+    <color name="edittext_bg">#f1f3f6</color>
+
+    <color name="button_bg">#e5e5e5</color>
+    <color name="button_text">#8e8e8e</color>
+
+    <color name="text_black_1">#4a4a4a</color>
+    <color name="text_black_2">#2b2b2b</color>
+
+    <color name="transparentcolor">#00000000</color>
+    <color name="feedback_editext_bg">#efefef</color>
+
+    <color name="earn_color">#3ab57c</color>
+    <color name="burn_color">#db9089</color>
+
+    <!--<color name="active_days_red">#c7222a</color>
+    <color name="active_days_peach">#db9089</color>
+    <color name="active_days_yellow">#f7a502</color>
+    <color name="active_days_brown">#6a4742</color>-->
+
+    <color name="active_days_peach">#db9089</color>
+    <color name="active_days_brown">#6a4742</color>
+    <color name="active_days_yellow">#f7a502</color>
+
+    <color name="calender_text">#1d1d26</color>
+
+    <color name="graph_tooltip">#393e44</color>
+
+    <color name="grey_bg">#f7f7f7</color>
+
+    <color name="yellow">#f1a222</color>
+    <color name="profile_text_grey">#909092</color>
+    <color name="orangeIndicator">#F1A222</color>
+    <color name="bottom_bar_grey">#929292</color>
+
+    <color name="silver">#d1d1d1</color>
+    <color name="bronze">#DAA574</color>
+    <color name="gold">#DE9318</color>
+
+    <color name="faq_ans_grey">#999999</color>
+
+    <color name="text_grey">#f3f3f3</color>
+
+    <color name="curve_grey">#2c2c2c</color>
+    <color name="text_curve_grey">#5f5f5f</color>
+
+    <color name="pendingactions_card1">#d4ae69</color>
+    <color name="pendingactions_card2">#db9089</color>
+    <color name="pendingactions_card3">#c7222b</color>
+
+    <color name="text_dashboard_grey">#545454</color>
+
+
+    <color name="main_bg_color">#f7f7f7</color>
+
+
+    <color name="cashless_claim_grey">#9d9d9d</color>
+    <color name="cashless_claim_hints">#82878a</color>
+    <color name="fab_bg">#f2ffffff</color>
+    <color name="hide_details_bg">#b21e26</color>
+    <color name="graph_fill_color">#00ffffff</color>
+    <color name="track_claims_landing_bg">#b1b1b1</color>
+    <color name="address_color">#494949</color>
+    <color name="fitness_type_bg">#fafafa</color>
+    <color name="red_indicator">#dd7a7f</color>
+    <color name="light_blue">#337ab7</color>
+
+    <color name="black_opacity60">#99000000</color>
+
+    <color name="divider_color">#000000</color>
+    <color name="light_grey">#d8d8d8</color>
+    <color name="white_opacity65">#A6FFFFFF</color>
+    <color name="black_opacity40">#66000000</color>
+
+    <color name="grey6">#797979</color>
+    <color name="grey7">#979797</color>
+    <color name="grey8">#e6e6e6</color>
+
+    <color name="href">#0000FF</color>
+    <color name="green">#008000</color>
+
+    <color name="profileicons">#6A4742</color>
+    <color name="profileicons_">#556A4742</color>
+    <color name="black_">#55000000</color>
+
+    <color name="white_">#99ffffff</color>
 </resources>
